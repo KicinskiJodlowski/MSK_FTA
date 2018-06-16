@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<FAILURETREE>
+  <NODE ID="1">
+    <ID>1</ID>
+    <NAME>Pierwszy</NAME>
+    <TEXT></TEXT>
+    <TYPE></TYPE>
+    <LEVEL>1</LEVEL>
+    <CHILD>2</CHILD>
+    <CHILD>3</CHILD>
+    <CHILD>6</CHILD>
+    <CHILD>7</CHILD>
+  </NODE>
+  <NODE>
+    <ID>2</ID>
+    <NAME>Drugi</NAME>
+    <TEXT></TEXT>
+    <TYPE></TYPE>
+    <LEVEL>2</LEVEL>
+  </NODE>
+  <NODE>
+    <ID>3</ID>
+    <NAME>Trzeci</NAME>
+    <TEXT></TEXT>
+    <TYPE></TYPE>
+    <LEVEL>2</LEVEL>
+    <CHILD>4</CHILD>
+    <CHILD>5</CHILD>
+  </NODE>
+  <NODE>
+    <ID>4</ID>
+    <NAME>Czwarty</NAME>
+    <TEXT></TEXT>
+    <TYPE></TYPE>
+    <LEVEL>3</LEVEL>
+  </NODE>
+  <NODE>
+    <ID>5</ID>
+    <NAME>Piąty</NAME>
+    <TEXT></TEXT>
+    <TYPE></TYPE>
+    <LEVEL>3</LEVEL>
+  </NODE>
+  <NODE>
+    <ID>6</ID>
+    <NAME>Szósty</NAME>
+    <TEXT></TEXT>
+    <TYPE></TYPE>
+    <LEVEL>2</LEVEL>
+  </NODE>
+  <NODE>
+    <ID>7</ID>
+    <NAME>Siódmy</NAME>
+    <TEXT></TEXT>
+    <TYPE></TYPE>
+    <LEVEL>2</LEVEL>
+  </NODE>
+
+</FAILURETREE>

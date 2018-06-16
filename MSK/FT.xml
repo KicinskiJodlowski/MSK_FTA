@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<FAILURETREE>
+  <NODE ID="1" NAME="Pierwszy" TEXT="" TYPE="" LEVEL="1">
+    <CHILD>2</CHILD>
+    <CHILD>3</CHILD>
+    <CHILD>6</CHILD>
+    <CHILD>7</CHILD>
+  </NODE>
+  <NODE ID="2" NAME="Drugi" TEXT="" TYPE="" LEVEL="2"></NODE>
+  <NODE ID="3" NAME="Trzeci" TEXT="" TYPE="" LEVEL="2">
+    <CHILD>4</CHILD>
+    <CHILD>5</CHILD>
+  </NODE>
+  <NODE ID="4" NAME="Czwarty" TEXT="" TYPE="" LEVEL="3"></NODE>
+  <NODE ID="5" NAME="Piąty" TEXT="" TYPE="" LEVEL="3"></NODE>
+  <NODE ID="6" NAME="Szósty" TEXT="" TYPE="" LEVEL="2"></NODE>
+  <NODE ID="7" NAME="Siódmy" TEXT="" TYPE="" LEVEL="2"></NODE>
+
+</FAILURETREE>
