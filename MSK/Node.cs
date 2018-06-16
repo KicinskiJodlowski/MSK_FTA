@@ -29,7 +29,16 @@ namespace MSK
             this._type = type;
             this._level = level;
             this._childrenIDList = childrenIdList;
-            
+
+        }
+
+        public string getText()
+        {
+            return _text;
+        }
+        public List<int> getChildrenList()
+        {
+            return _childrenIDList;
         }
     }
 }
