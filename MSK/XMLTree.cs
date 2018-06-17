@@ -31,6 +31,12 @@ namespace MSK
             //    }
             //}
         }
+
+        public Node getNodeFromXMLTree(int i)
+        {
+            return NodesFTAList[i];
+        }
+
         public void xmlImport() {
             XDocument xmlDoc = XDocument.Load(filePath);
             
