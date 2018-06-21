@@ -5,7 +5,7 @@ using System.Text;
 
 using System.Drawing;
 
-namespace MSK
+namespace DSK
 {
     // Represents something that a TreeNode can draw.
     interface IDrawable

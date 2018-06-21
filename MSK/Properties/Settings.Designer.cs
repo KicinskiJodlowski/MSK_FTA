@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSK.Properties
+namespace DSK.Properties
 {
 
 

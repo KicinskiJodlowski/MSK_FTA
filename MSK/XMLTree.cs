@@ -9,12 +9,12 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace MSK
+namespace DSK
 {
 
     class XMLTree
     {
-        private string filePath = @"C:\Users\Kamil\Desktop\MSK\MSK\FT.xml";
+        private string filePath = @"C:\Users\Zalman\Source\Repos\MSK_FTA\MSK\FT.xml";
         private List<Node> NodesFTAList;
 
         public XMLTree()
@@ -60,6 +60,9 @@ namespace MSK
                 n = new Node(id, text, type, level, childrenIDList);
                 NodesFTAList.Add(n);
             }
+
+            Console.WriteLine(NodesFTAList.ToString());
+            
         }
     }
 }

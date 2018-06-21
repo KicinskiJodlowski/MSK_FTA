@@ -5,7 +5,7 @@ using System.Text;
 
 using System.Drawing;
 
-namespace MSK
+namespace DSK
 {
     class TreeNode<T> where T : IDrawable
     {

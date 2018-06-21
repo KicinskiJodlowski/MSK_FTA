@@ -88,6 +88,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -106,6 +107,18 @@
   <ItemGroup>
     <Content Include="FT.xml" />
     <Content Include="FT2.xml" />
+    <None Include="Resources\zdarzenie_zewnetrzne.png" />
+    <None Include="Resources\zdarzenie_warunkowe.png" />
+    <None Include="Resources\zdarzenie_posrednie.png" />
+    <None Include="Resources\zdarzenie_nierozwieniete.png" />
+    <None Include="Resources\XOR.png" />
+    <None Include="Resources\transfer_out.png" />
+    <None Include="Resources\transfer_in.png" />
+    <None Include="Resources\priority_AND.png" />
+    <None Include="Resources\podstawowe_zdarzenie.png" />
+    <None Include="Resources\OR.png" />
+    <None Include="Resources\inhibit_gate.png" />
+    <None Include="Resources\AND.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
