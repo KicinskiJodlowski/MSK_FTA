@@ -19,35 +19,56 @@ namespace DSK
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblNodeText;
 
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        private static List<Node> nodeList = new XMLTree().GetNodesFTAList();
         private TreeNode<PictureNode> root =
             new TreeNode<PictureNode>(
-                new PictureNode(new XMLTree().getNodeFromXMLTree(0).getText(),
-                    Resources.AND));
+                new PictureNode(nodeList.ElementAt(0).getText(),
+                    nodeList.ElementAt(0).getImage()));
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            root.AddChild(new TreeNode<PictureNode>(
-                new PictureNode(new XMLTree().getNodeFromXMLTree(1).getText(),
-                    Resources.AND)));
-            root.AddChild(new TreeNode<PictureNode>(
-                new PictureNode(new XMLTree().getNodeFromXMLTree(2).getText(),
-                    Resources.AND)));
+            
+            List<int> childList = nodeList.ElementAt(0).getChildrenList();
+            foreach (int child in childList)
+            {
+                TreeNode<PictureNode> childNode = new TreeNode<PictureNode>(
+                    new PictureNode(nodeList.ElementAt(child - 1).getText(),
+                        nodeList.ElementAt(child - 1).getImage()));
+                root.AddChild(childNode);
+                if (nodeList.ElementAt(child - 1).getChildrenList().Count > 0)
+                {
+                    foreach (int childLevel2 in nodeList.ElementAt((child - 1)).getChildrenList())
+                    {
+                        TreeNode<PictureNode> childNodeLevel2 = new TreeNode<PictureNode>(
+                            new PictureNode(nodeList.ElementAt(childLevel2 - 1).getText(),
+                                nodeList.ElementAt(childLevel2 - 1).getImage()));
+                        childNode.AddChild(childNodeLevel2);
+
+                    }
+                }
+            }
+
+
+
+
 
             ArrangeTree();
         }
-        
+
         private void ArrangeTree()
         {
             using (Graphics gr = picTree.CreateGraphics())
             {
                 // Arrange the tree once to see how big it is.
-                float xmin = 0, ymin = 0;
+                float xmin = 200, ymin = 200;
                 root.Arrange(gr, ref xmin, ref ymin);
 
                 // Arrange the tree again to center it horizontally.
@@ -98,7 +119,7 @@ namespace DSK
             ArrangeTree();
         }
 
-        
+
         // The currently selected node.
         private TreeNode<PictureNode> SelectedNode;
 

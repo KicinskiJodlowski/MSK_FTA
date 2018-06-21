@@ -37,6 +37,11 @@ namespace DSK
             return NodesFTAList[i];
         }
 
+        public List<Node> GetNodesFTAList()
+        {
+            return NodesFTAList;
+        }
+
         public void xmlImport() {
             XDocument xmlDoc = XDocument.Load(filePath);
             
