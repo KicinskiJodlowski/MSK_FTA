@@ -13,10 +13,10 @@ namespace DSK
         private int _id;
         private string _text;
         private int _type;
-        private int _level;
+        private double _level;
         private List<int> _childrenIDList;
 
-        public Node(int id, string text, int type, int level)
+        public Node(int id, string text, int type, double level)
         {
             this._id = id;
             this._text = text;
@@ -24,7 +24,7 @@ namespace DSK
             this._level = level;
 
         }
-        public Node(int id, string text, int type, int level, List<int> childrenIdList)
+        public Node(int id, string text, int type, double level, List<int> childrenIdList)
         {
             this._id = id;
             this._text = text;
@@ -84,6 +84,12 @@ namespace DSK
                     return Resources.ERROR;
                     break;
             }
+        }
+
+        internal double getProbability()
+        {
+            
+            return _level;
         }
 
         public List<int> getChildrenList()

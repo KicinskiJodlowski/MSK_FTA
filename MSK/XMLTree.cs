@@ -58,14 +58,15 @@ namespace DSK
             foreach (XElement level1Element in XElement.Load(filePath).Elements("NODE"))
             {
                 Node n;
-                int id, type, level, child = 0;
+                int id, type, child = 0;
+                double level = 0.0;
                 string name, text;
                 List<int> childrenIDList = new List<int>();
                 Int32.TryParse(level1Element.Attribute("ID").Value, out id);
                 name = level1Element.Attribute("NAME").Value;
                 text = level1Element.Attribute("TEXT").Value;
                 Int32.TryParse(level1Element.Attribute("TYPE").Value, out type);
-                Int32.TryParse(level1Element.Attribute("LEVEL").Value, out level);
+                Double.TryParse(level1Element.Attribute("LEVEL").Value, out level);
 
                 foreach (XElement level2Element in level1Element.Elements("CHILD"))
                 {

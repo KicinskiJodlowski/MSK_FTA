@@ -31,7 +31,7 @@ namespace DSK
         private TreeNode<PictureNode> root =
             new TreeNode<PictureNode>(
                 new PictureNode(nodeList.ElementAt(0).getText(),
-                    nodeList.ElementAt(0).getImage()));
+                    nodeList.ElementAt(0).getImage(), nodeList.ElementAt(0).getProbability()));
 
        
 
@@ -45,7 +45,7 @@ namespace DSK
             {
                 TreeNode<PictureNode> childNode = new TreeNode<PictureNode>(
                     new PictureNode(nodeList.ElementAt(child - 1).getText(),
-                        nodeList.ElementAt(child - 1).getImage()));
+                        nodeList.ElementAt(child - 1).getImage(), nodeList.ElementAt(child - 1).getProbability()));
                 root.AddChild(childNode);
                 if (nodeList.ElementAt(child - 1).getChildrenList().Count > 0)
                 {
@@ -53,7 +53,7 @@ namespace DSK
                     {
                         TreeNode<PictureNode> childNodeLevel2 = new TreeNode<PictureNode>(
                             new PictureNode(nodeList.ElementAt(childLevel2 - 1).getText(),
-                                nodeList.ElementAt(childLevel2 - 1).getImage()));
+                                nodeList.ElementAt(childLevel2 - 1).getImage(), nodeList.ElementAt(childLevel2 - 1).getProbability()));
                         childNode.AddChild(childNodeLevel2);
 
                     }
@@ -97,14 +97,14 @@ namespace DSK
             root =
                 new TreeNode<PictureNode>(
                     new PictureNode(nodeList.ElementAt(0).getText(),
-                        nodeList.ElementAt(0).getImage()));
+                        nodeList.ElementAt(0).getImage(), nodeList.ElementAt(0).getProbability()));
             Form1_Load(sender, e);
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -122,6 +122,14 @@ namespace DSK
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
             root.DrawTree(e.Graphics);
+        }
+
+        //Count probability.
+        private double picTree_countProbability(object sender, EventArgs e)
+        {
+            root.CountTree();
+            double probability=0.0;
+            return probability;
         }
 
 
@@ -159,7 +167,14 @@ namespace DSK
             if (SelectedNode != null)
             {
                 SelectedNode.Data.Selected = true;
-                lblNodeText.Text = SelectedNode.Data.Description;
+                if (SelectedNode.Data.Probability>0)
+                {
+                    lblNodeText.Text = SelectedNode.Data.Description + " (Prawdopodobieństwo: " + SelectedNode.Data.Probability + ")";
+                }
+                else
+                {
+                    lblNodeText.Text = SelectedNode.Data.Description;
+                }
             }
 
             // Redraw.

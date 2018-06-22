@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <FAILURETREE>
-  <NODE ID="1" NAME="Pierwszy" TEXT="Pierwszy" TYPE="1" LEVEL="1">
+  <NODE ID="1" NAME="Pierwszy" TEXT="Pierwszy" TYPE="1" LEVEL="0,0001">
     <CHILD>2</CHILD>
     <CHILD>3</CHILD>
     <CHILD>6</CHILD>
     <CHILD>7</CHILD>
   </NODE>
-  <NODE ID="2" NAME="Drugi" TEXT="Drugi" TYPE="1" LEVEL="2"></NODE>
-  <NODE ID="3" NAME="Trzeci" TEXT="Trzeci" TYPE="2" LEVEL="2">
+  <NODE ID="2" NAME="Drugi" TEXT="Drugi" TYPE="1" LEVEL="0,0002"></NODE>
+  <NODE ID="3" NAME="Trzeci" TEXT="Trzeci" TYPE="2" LEVEL="0,0002">
     <CHILD>4</CHILD>
     <CHILD>5</CHILD>
   </NODE>
-  <NODE ID="4" NAME="Czwarty" TEXT="Czwarty" TYPE="4" LEVEL="3"></NODE>
-  <NODE ID="5" NAME="Piąty" TEXT="Piąty" TYPE="1" LEVEL="3"></NODE>
-  <NODE ID="6" NAME="Szósty" TEXT="Szósty" TYPE="2" LEVEL="2"></NODE>
-  <NODE ID="7" NAME="Siódmy" TEXT="Siódmy" TYPE="3" LEVEL="2"></NODE>
+  <NODE ID="4" NAME="Czwarty" TEXT="Czwarty" TYPE="4" LEVEL="0,0003"></NODE>
+  <NODE ID="5" NAME="Piąty" TEXT="Piąty" TYPE="1" LEVEL="0,0003"></NODE>
+  <NODE ID="6" NAME="Szósty" TEXT="Szósty" TYPE="2" LEVEL="0,0002"></NODE>
+  <NODE ID="7" NAME="Siódmy" TEXT="Siódmy" TYPE="3" LEVEL="0,0002"></NODE>
 
 </FAILURETREE>

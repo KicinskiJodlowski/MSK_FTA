@@ -13,15 +13,16 @@ namespace DSK
         // Constructor.
         public Image Picture = null;
         public string Description;
-        public float Probability;
+        public double Probability;
         public bool Selected = false;
-        public PictureNode(string description, Image picture)
+        public PictureNode(string description, Image picture, double probability)
         {
             Description = description;
             Picture = picture;
+            Probability = probability;
 
             // For testing.
-            //NodeSize = new SizeF(Rand.Next(50, 150), Rand.Next(50, 150));
+            ///NodeSize = new SizeF(Rand.Next(50, 150), Rand.Next(50, 150));
         }
 
         // The size of the drawn rectangles.

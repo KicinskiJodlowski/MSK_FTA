@@ -11,6 +11,7 @@ namespace DSK
     {
         // The data.
         public T Data;
+        public double FinalProbability=0.0;
 
         // Child nodes in the tree.
         public List<TreeNode<T>> Children = new List<TreeNode<T>>();
@@ -182,6 +183,7 @@ namespace DSK
             }
         }
 
+
         // Return the TreeNode at this point (or null if there isn't one there).
         public TreeNode<T> NodeAtPoint(Graphics gr, PointF target_pt)
         {
@@ -221,6 +223,7 @@ namespace DSK
             return false;
         }
 
+        
         public void DeleteTree()
         {
             Children.Clear();

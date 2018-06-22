@@ -35,6 +35,8 @@ namespace DSK
             this.picTree = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblNodeText = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picTree)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +61,7 @@ namespace DSK
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Analizuj";
+            this.button2.Text = "Oblicz";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -96,12 +98,33 @@ namespace DSK
             this.lblNodeText.Name = "lblNodeText";
             this.lblNodeText.Size = new System.Drawing.Size(0, 17);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(638, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Prawdopodobieństwo:";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(662, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(10, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = " ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(750, 522);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.picTree);
@@ -123,8 +146,8 @@ namespace DSK
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-
-        
+        private Label label1;
+        private Label label2;
     }
 }
 
