@@ -11,8 +11,13 @@
     <CHILD>5</CHILD>
     <CHILD>6</CHILD>
   </NODE>
-  <NODE ID="4" NAME="Czwarty" TEXT="Iskra" TYPE="4" LEVEL="0,0003"></NODE>
-  <NODE ID="5" NAME="Piąty" TEXT="Pęknięcie" TYPE="4" LEVEL="0,0003"></NODE>
-  <NODE ID="6" NAME="Szósty" TEXT="Korozja" TYPE="4" LEVEL="0,0002"></NODE>
+  <NODE ID="4" NAME="Czwarty" TEXT="Iskra" TYPE="4" LEVEL="0,0004"></NODE>
+  <NODE ID="5" NAME="Piąty" TEXT="Pęknięcie" TYPE="4" LEVEL="0,0005"></NODE>
+  <NODE ID="6" NAME="Szósty" TEXT="Korozja" TYPE="3" LEVEL="-2">
+    <CHILD>7</CHILD>
+    <CHILD>8</CHILD>
+  </NODE>
+  <NODE ID="7" NAME="Siódmy" TEXT="Aluminium" TYPE="4" LEVEL="0,0007"></NODE>
+  <NODE ID="8" NAME="Ósmy" TEXT="Stali" TYPE="4" LEVEL="0,0008"></NODE>
 
 </FAILURETREE>

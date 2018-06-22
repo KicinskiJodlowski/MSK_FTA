@@ -104,7 +104,23 @@ namespace DSK
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            foreach (TreeNode<PictureNode> child in root.Children)
+            {
+                if (child.Data.Probability<0)
+                {
+                    foreach (TreeNode<PictureNode> childlvl2 in child.Children)
+                    {
+                        
+                        if (childlvl2.Children.Count==0)
+                        {
+                            Console.WriteLine("Jest tylko jeden:");
+                        }
+                        Console.WriteLine(child.Data.Probability + " " + childlvl2.Data.Probability);
+                    }
+                }
+                Console.WriteLine(child.Data.Probability);
+                
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -127,7 +143,7 @@ namespace DSK
         //Count probability.
         private double picTree_countProbability(object sender, EventArgs e)
         {
-            root.CountTree();
+            //root.CountTree();
             double probability=0.0;
             return probability;
         }
@@ -169,11 +185,11 @@ namespace DSK
                 SelectedNode.Data.Selected = true;
                 if (SelectedNode.Data.Probability>0)
                 {
-                    lblNodeText.Text = SelectedNode.Data.Description + " (Prawdopodobieństwo: " + SelectedNode.Data.Probability + ")";
+                    lblNodeText.Text = SelectedNode.Data.Description + " (Prawdopodobieństwo: " + SelectedNode.Data.Probability + ") " + root.Data.Probability;
                 }
                 else
                 {
-                    lblNodeText.Text = SelectedNode.Data.Description;
+                    lblNodeText.Text = SelectedNode.Data.Description + SelectedNode.Children.ElementAt(1).Data.Probability;
                 }
             }
 
