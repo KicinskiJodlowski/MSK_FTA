@@ -106,9 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FT.xml" />
-    <Content Include="FT2.xml" />
-    <None Include="Resources\771de10db41e71e558661c5471057907.png" />
-    <None Include="Resources\ERROR.jpg" />
+    <Content Include="FT_Explosion.xml" />
+    <None Include="Resources\ERROR.png" />
     <None Include="Resources\zdarzenie_zewnetrzne.png" />
     <None Include="Resources\zdarzenie_warunkowe.png" />
     <None Include="Resources\zdarzenie_posrednie.png" />

@@ -14,7 +14,7 @@ namespace DSK
 
     class XMLTree
     {
-        private string filePath = @"C:\Users\Zalman\Source\Repos\MSK_FTA\MSK\FT.xml";
+        private string filePath = @"C:\Users\Zalman\Source\Repos\MSK_FTA\MSK\FT_explosion.xml";
         private List<Node> NodesFTAList;
 
         public XMLTree()
@@ -22,14 +22,7 @@ namespace DSK
 
             this.NodesFTAList = new List<Node>();
             xmlImport();
-            //foreach (Node n in NodesFTAList)
-            //{
-            //    foreach (int child in n.getChildrenList())
-            //    {
-                   
-            //        Console.WriteLine(child);
-            //    }
-            //}
+            
         }
 
         public Node getNodeFromXMLTree(int i)

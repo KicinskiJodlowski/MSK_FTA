@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<FAILURETREE>
+  <NODE ID="1" NAME="Eksplozja" TEXT="Eksplozja" TYPE="1" LEVEL="1">
+    <CHILD>2</CHILD>
+    <CHILD>3</CHILD>
+    <CHILD>4</CHILD>
+  </NODE>
+  <NODE ID="2" NAME="Drugi" TEXT="Braki w systemie bezpieczeństwa" TYPE="6" LEVEL="2"></NODE>
+  <NODE ID="3" NAME="Trzeci" TEXT="Wyciek paliwa" TYPE="3" LEVEL="2">
+    <CHILD>5</CHILD>
+    <CHILD>6</CHILD>
+  </NODE>
+  <NODE ID="4" NAME="Czwarty" TEXT="Iskra" TYPE="4" LEVEL="3"></NODE>
+  <NODE ID="5" NAME="Piąty" TEXT="Pęknięcie" TYPE="4" LEVEL="3"></NODE>
+  <NODE ID="6" NAME="Szósty" TEXT="Korozja" TYPE="4" LEVEL="2"></NODE>
+
+</FAILURETREE>
