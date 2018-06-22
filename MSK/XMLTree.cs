@@ -25,6 +25,13 @@ namespace DSK
             
         }
 
+        public XMLTree(string path)
+        {
+            this.NodesFTAList = new List<Node>();
+            this.filePath = @path;
+            xmlImport();
+        }
+
         public Node getNodeFromXMLTree(int i)
         {
             return NodesFTAList[i];
@@ -33,6 +40,16 @@ namespace DSK
         public List<Node> GetNodesFTAList()
         {
             return NodesFTAList;
+        }
+
+        public void setFilePath(string path)
+        {
+            filePath = path;
+        }
+
+        public void clearList()
+        {
+            NodesFTAList.Clear();
         }
 
         public void xmlImport() {

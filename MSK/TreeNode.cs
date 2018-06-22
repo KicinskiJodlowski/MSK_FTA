@@ -220,5 +220,10 @@ namespace DSK
             // It's not in our subtree.
             return false;
         }
+
+        public void DeleteTree()
+        {
+            Children.Clear();
+        }
     }
 }

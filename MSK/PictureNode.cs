@@ -13,6 +13,7 @@ namespace DSK
         // Constructor.
         public Image Picture = null;
         public string Description;
+        public float Probability;
         public bool Selected = false;
         public PictureNode(string description, Image picture)
         {

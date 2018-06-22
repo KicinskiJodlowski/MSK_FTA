@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,20 +24,23 @@ namespace DSK
         public Form1()
         {
             InitializeComponent();
+            
         }
-
-        private static List<Node> nodeList = new XMLTree().GetNodesFTAList();
+        private static XMLTree xmlTree = new XMLTree();
+        private static List<Node> nodeList = xmlTree.GetNodesFTAList();
         private TreeNode<PictureNode> root =
             new TreeNode<PictureNode>(
                 new PictureNode(nodeList.ElementAt(0).getText(),
                     nodeList.ElementAt(0).getImage()));
 
+       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             
-            List<int> childList = nodeList.ElementAt(0).getChildrenList();
+
+        List<int> childList = nodeList.ElementAt(0).getChildrenList();
             foreach (int child in childList)
             {
                 TreeNode<PictureNode> childNode = new TreeNode<PictureNode>(
@@ -55,11 +59,6 @@ namespace DSK
                     }
                 }
             }
-
-
-
-
-
             ArrangeTree();
         }
 
@@ -87,7 +86,20 @@ namespace DSK
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new XMLTree();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+            openFileDialog.ShowDialog();
+            string path = openFileDialog.FileName;
+            xmlTree.setFilePath(path);
+            xmlTree.clearList();
+            xmlTree = new XMLTree(path);
+            nodeList = xmlTree.GetNodesFTAList();
+            root =
+                new TreeNode<PictureNode>(
+                    new PictureNode(nodeList.ElementAt(0).getText(),
+                        nodeList.ElementAt(0).getImage()));
+            Form1_Load(sender, e);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
